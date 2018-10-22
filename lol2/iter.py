@@ -1,21 +1,19 @@
-
 data1 = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
 
 class Unique:
-    def __init__(self,lst,ignore_case=False):
-        self.data = self.new_list(data,ignore_case)
+    def __init__(self, lst, ignore_case=False):
+        self.data = self.new_list(lst, ignore_case)
         self.n = len(self.data)
         self.i = 0
 
-    def  __iter__(self):
+    def __iter__(self):
         return self
 
-
     @staticmethod
-    def new_list(l,ignore_case):
+    def new_list(l, ignore_case):
         new_lst = []
         if ignore_case:
-            l = [i.lower() for i in l]
+            l = [i.lower() if type(i) == str else i for i in l]
         for el in l:
             if el in new_lst:
                 continue
@@ -31,6 +29,9 @@ class Unique:
         else:
             raise StopIteration()
 
+
 data = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
-x = Unique(data)
+#data = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
+#dat = ['a', 'A']
+x = Unique(data, ignore_case=True)
 print([i for i in x])

@@ -7,21 +7,18 @@ def gen_random(Num, start, finish):
         yield (random.randrange(start, finish))
 
 
-print([i for i in gen_random(4, 2, 7)])
+print([i for i in gen_random(2, 2, 7)])
 
 
 def field(list, *args):
     for l in list:
         if len(args) > 1:
-            #d = {}
+            d = {}
             for a in args:
                 if a in l.keys():
-                    if l[a] is not  None:
-                        yield l[a]
-
-
-
-
+                    if l[a] is not None:
+                        d[a] = l[a]
+            yield d
 
         elif len(args) == 1:
             for a in args:
