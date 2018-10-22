@@ -1,5 +1,5 @@
 def print_result(foo):
-    def decorated(*args):
+    def decorated(*args,**kwargs):
         print(foo.__name__)
         res = foo(*args)
         if isinstance(res, list):
