@@ -1,10 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+
+from .models import Item
 
 
 # Create your views here.
-def test(request):
-    return render(request, 'main/test.html', {'x': ['Emir', 2, 3, 4, 5]})
+def list(request):
+    items = Item.objects.all()
+    return render(request, 'main/list.html', {'items': items})
 
 
 def detail(request, id):
-    return render(request, 'main/detail.html', {'id': id})
+    item = get_object_or_404(Item, id=id)
+    return render(request, 'main/detail.html', {'item': item})
