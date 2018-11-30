@@ -4,3 +4,4 @@
 2. [Лаб 2](https://github.com/Alexxxtentancion/RIP2018/tree/2lab)
 3. [Лаб 3](https://github.com/Alexxxtentancion/RIP2018/tree/3lab)
 4. [Лаб 4](https://github.com/Alexxxtentancion/RIP2018/tree/lab4)
+5. [Лаб 5](https://github.com/Alexxxtentancion/RIP2018/tree/lab5)
