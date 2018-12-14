@@ -1,0 +1,23 @@
+.title {
+    font-size: 16px;
+    
+}
+/* .img {
+    background: url('./img/tech.png') no-repeat center;
+    background-size: contain;
+    width: 1000px;
+    height: 100px;
+} */
+.date {
+    font-size: 12px;
+    color: darkslategrey;
+}
+
+.title_silver {
+    color: silver;
+}
+
+
+.title_green {
+    color: green;
+}
